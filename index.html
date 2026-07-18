@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Pearl Hotel | 3-Star Hotel in Addis Ababa</title>
+    <link rel="icon" type="image/svg+xml" href="public/favicon.svg">
+    <meta name="description" content="Green Pearl Hotel is a cozy, highly-rated 3-star accommodation in Addis Ababa, Ethiopia, located in Gulele Sub City, Woreda 7, Addisu Gebeya.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="logo">
+            <img src="public/green peral logo.jpg" alt="Green Pearl Logo" class="logo-img">
+            <h2 class="logo-text">Green Pearl</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#rooms">Rooms</a></li>
+            <li><a href="#amenities">Amenities</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="mobile-only" style="display: none;"><a href="#booking" class="btn btn-primary">Book Now</a></li>
+        </ul>
+        <a href="#booking" class="btn btn-primary nav-book">Book Now</a>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <header id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>GREEN PEARL HOTEL</h1>
+            <p>A Cozy 3-Star Hotel in the Heart of Addis Ababa</p>
+            <a href="#booking" class="btn btn-primary btn-large">Book Your Stay</a>
+        </div>
+    </header>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Our Rooms</h2>
+                <p>Designed to provide an optimal level of comfort.</p>
+            </div>
+            <div class="grid cards">
+                <!-- Room 1 -->
+                <div class="card room-card fade-in">
+                    <img src="public/grean-pearl room 1.jpg" alt="Standard Room">
+                    <div class="card-content">
+                        <h3>Comfort Room</h3>
+                        <p class="price">$150 / night</p>
+                        <p class="desc">A cozy, beautifully designed room featuring blackout curtains, air conditioning, and a balcony or terrace.</p>
+                        <ul class="room-amenities">
+                            <li><i class="icon">🌐</i> Free Wi-Fi</li>
+                            <li><i class="icon">❄️</i> Air Conditioning</li>
+                            <li><i class="icon">🛏️</i> Linens & Towels</li>
+                        </ul>
+                        <a href="#booking" class="btn btn-outline" onclick="selectRoom('standard')">Select Room</a>
+                    </div>
+                </div>
+                <!-- Room 2 -->
+                <div class="card room-card fade-in">
+                    <img src="public/green-pearl room 2.jpg" alt="Deluxe Room">
+                    <div class="card-content">
+                        <h3>Deluxe Room</h3>
+                        <p class="price">$250 / night</p>
+                        <p class="desc">Spacious and elegant, featuring a hair dryer, toiletries, slippers, and closet space for a relaxing stay.</p>
+                        <ul class="room-amenities">
+                            <li><i class="icon">🌐</i> Free Wi-Fi</li>
+                            <li><i class="icon">🛁</i> Toiletries</li>
+                            <li><i class="icon">🚿</i> Shower</li>
+                        </ul>
+                        <a href="#booking" class="btn btn-outline" onclick="selectRoom('deluxe')">Select Room</a>
+                    </div>
+                </div>
+                <!-- Room 3 -->
+                <div class="card room-card fade-in">
+                    <img src="public/green-pearl room 3.jpg" alt="Suite">
+                    <div class="card-content">
+                        <h3>Suite</h3>
+                        <p class="price">$450 / night</p>
+                        <p class="desc">Premium comfort with expanded space, featuring a private balcony, socket near the bed, and daily housekeeping.</p>
+                        <ul class="room-amenities">
+                            <li><i class="icon">🌐</i> Free Wi-Fi</li>
+                            <li><i class="icon">🌿</i> Balcony</li>
+                            <li><i class="icon">🧹</i> Housekeeping</li>
+                        </ul>
+                        <a href="#booking" class="btn btn-outline" onclick="selectRoom('suite')">Select Room</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section id="amenities" class="section-padding">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Amenities and Facilities</h2>
+                <p>Everything you need for a perfect stay.</p>
+            </div>
+            <div class="grid amenities-grid">
+                <div class="amenity-item fade-in">
+                    <div class="amenity-icon">🌐</div>
+                    <h4>Free Wi-Fi</h4>
+                    <p>Internet access in all rooms.</p>
+                </div>
+                <div class="amenity-item fade-in">
+                    <div class="amenity-icon">🍹</div>
+                    <h4>On-site Bar</h4>
+                    <p>Enjoy drinks and refreshments at our welcoming bar.</p>
+                </div>
+                <div class="amenity-item fade-in">
+                    <div class="amenity-icon">☕</div>
+                    <h4>Pastry &amp; Café</h4>
+                    <p>Fresh pastries and coffee to start your day right.</p>
+                </div>
+                <div class="amenity-item fade-in">
+                    <div class="amenity-icon">🌿</div>
+                    <h4>Terrace</h4>
+                    <p>Relax and unwind on our beautiful open terrace.</p>
+                </div>
+                <div class="amenity-item fade-in">
+                    <div class="amenity-icon">🥩</div>
+                    <h4>Butchery</h4>
+                    <p>Premium quality meats available on-site.</p>
+                </div>
+                <div class="amenity-item fade-in">
+                    <div class="amenity-icon">🧹</div>
+                    <h4>Daily Housekeeping</h4>
+                    <p>Relax and enjoy your stay while we handle the cleaning.</p>
+                </div>
+                <div class="amenity-item fade-in">
+                    <div class="amenity-icon">🛎️</div>
+                    <h4>24-Hour Front Desk</h4>
+                    <p>Always available to assist you with anything you need.</p>
+                </div>
+                <div class="amenity-item fade-in">
+                    <div class="amenity-icon">❄️</div>
+                    <h4>Air Conditioning</h4>
+                    <p>Stay cool and comfortable in select rooms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="section-padding bg-dark text-white">
+        <div class="container">
+            <div class="booking-wrapper">
+                <div class="booking-info fade-in">
+                    <h2>Book Your Stay</h2>
+                    <p>Reserve your room now and get ready for an unforgettable experience at Green Pearl.</p>
+                    <br>
+                    <h3>Check-in / Check-out</h3>
+                    <p>Check-in from: 13:00</p>
+                    <p>Check-out until: 12:00</p>
+                    <p>Check-in until: 14:00</p>
+                    <br>
+                    <h3>Policies</h3>
+                    <p>When booking more than 5 rooms, different policies and additional supplements may apply. Extra beds, if available, are dependent on the room you choose.</p>
+                </div>
+                <form id="booking-form" class="booking-form glass-panel fade-in">
+                    <div class="form-group">
+                        <label for="check-in">Check-in Date</label>
+                        <input type="date" id="check-in" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="check-out">Check-out Date</label>
+                        <input type="date" id="check-out" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Guests</label>
+                        <select id="guests" required>
+                            <option value="1">1 Guest</option>
+                            <option value="2" selected>2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="room-selection">Room Type</label>
+                        <select id="room-selection" required>
+                            <option value="standard">Comfort Room</option>
+                            <option value="deluxe">Deluxe Room</option>
+                            <option value="suite">Suite</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Confirm Booking</button>
+                    <div id="booking-message" class="hidden message-box">Booking Confirmed!</div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section-padding">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Gallery</h2>
+                <p>A glimpse into the Green Pearl experience.</p>
+            </div>
+            <div class="gallery-grid">
+                <img src="public/green-pearl out.jpg" alt="Exterior" class="gallery-img fade-in">
+                <img src="public/grean-pearl room 1.jpg" alt="Room 1" class="gallery-img fade-in">
+                <img src="public/green-pearl room 2.jpg" alt="Room 2" class="gallery-img fade-in">
+                <img src="public/green-pearl room 3.jpg" alt="Room 3" class="gallery-img fade-in">
+                <img src="public/green -pearl room shower.jpg" alt="Shower" class="gallery-img fade-in">
+                <img src="public/green- pearl room shower 2.jpg" alt="Shower 2" class="gallery-img fade-in">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="section-padding bg-light">
+        <div class="container">
+            <div class="about-flex">
+                <div class="about-text fade-in">
+                    <h2>About Green Pearl</h2>
+                    <h3>Your Home in Addis Ababa</h3>
+                    <p>Green Pearl Hotel is a cozy, highly-rated <strong>3-star accommodation</strong> located in <strong>Addis Ababa, Ethiopia</strong>. Situated in Gulele Sub City, Woreda 7, right next to Hamle 19 School in Addisu Gebeya, it is well-known for its comfortable rooms, welcoming terrace, a café, and excellent local dining options including traditional fasting buffets.</p>
+                    <p>The hotel is approximately <strong>7 miles from Bole International Airport</strong>, making it a convenient and comfortable base for both business and leisure travellers visiting Addis Ababa.</p>
+                    <p>GREEN PEARL HOTEL provides the best in services and amenities to help make guests feel comfortable. Guestrooms are designed to provide an optimal level of comfort with welcoming decor, free Wi-Fi, daily housekeeping, linen service, blackout curtains, and air conditioning in select rooms.</p>
+                </div>
+                <div class="about-image fade-in">
+                    <img src="public/green-pearl out.jpg" alt="Hotel Story">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Contact & Location</h2>
+                <p>We're here to help you plan your perfect stay.</p>
+            </div>
+            <div class="contact-flex">
+                <div class="contact-info fade-in">
+                    <div class="info-item">
+                        <h4>📍 Address</h4>
+                        <p>Gulele Sub City, Woreda 7, Addisu Gebeya<br>Next to Hamle 19 School, Addis Ababa, Ethiopia</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>✈️ Distance from Airport</h4>
+                        <p>~7 miles from Bole International Airport</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>📞 Phone</h4>
+                        <p>+251 96 534 5840<br>+251 91 358 3625</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>✉️ Email</h4>
+                        <p>info@greenpearlhotel.com</p>
+                    </div>
+                    
+                    <!-- Google Map -->
+                    <div class="map-container" style="padding: 0; overflow: hidden; position: relative;" id="map-container">
+                        <div class="map-overlay-text">
+                            <span>📍 Tap to interact with map</span>
+                        </div>
+                        <iframe 
+                            id="google-map-iframe"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.024526698874!2d38.7385312!3d9.061527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b8fec8b646bcd%3A0x85e0491a0229c00c!2zR3JlZW4gUGVhcmwgSG90ZWxzIHwgQWRkaXN1IEdlYmV5YSB8IOGMjeGIquGKlSDhjZLhiK3hiI0g4YiG4Ym04YiNIHwg4Yqg4Yuy4YixIOGMiOGJoOGLqw!5e0!3m2!1sen!2set!4v1784356087885!5m2!1sen!2set" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0; border-radius: 12px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="strict-origin-when-cross-origin">
+                        </iframe>
+                    </div>
+                </div>
+                <form id="contact-form" class="contact-form fade-in">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <div id="contact-message" class="hidden message-box">Message Sent!</div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-flex">
+            <div class="footer-brand">
+                <h2>Green Pearl</h2>
+                <p>A cozy 3-star hotel in Addis Ababa, Ethiopia.<br>Gulele Sub City, Woreda 7, Addisu Gebeya.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="#home">Home</a>
+                <a href="#rooms">Rooms</a>
+                <a href="#amenities">Amenities</a>
+                <a href="#booking">Book Now</a>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#">Fb</a>
+                    <a href="#">Ig</a>
+                    <a href="#">Tw</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Green Pearl Hotel. All rights reserved.</p>
+            <a href="#">Privacy Policy</a>
+        </div>
+    </footer>
+
+    <!-- Image Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <span class="lightbox-prev">&#10094;</span>
+        <span class="lightbox-next">&#10095;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
