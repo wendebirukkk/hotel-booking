@@ -291,7 +291,7 @@ nav.scrolled .logo-text {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background-image: url('public/green-pearl-out.jpg');
+    background-image: url('/green-pearl-out.jpg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
