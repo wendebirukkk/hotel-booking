@@ -393,8 +393,31 @@ const bookingMessage = document.getElementById('booking-message');
 if (bookingForm) {
     bookingForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        bookingMessage.classList.remove('hidden');
-        setTimeout(() => { bookingMessage.classList.add('hidden'); bookingForm.reset(); }, 3000);
+        const btn = bookingForm.querySelector('button[type="submit"]');
+        const originalText = btn.innerText;
+        btn.innerText = "Sending...";
+        
+        fetch("https://formsubmit.co/ajax/wondewossen9@gmail.com", {
+            method: "POST",
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify({
+                _subject: "New Room Booking Request",
+                checkIn: document.getElementById('check-in').value,
+                checkOut: document.getElementById('check-out').value,
+                guests: document.getElementById('guests').value,
+                roomType: document.getElementById('room-selection').value
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            btn.innerText = originalText;
+            bookingMessage.classList.remove('hidden');
+            setTimeout(() => { bookingMessage.classList.add('hidden'); bookingForm.reset(); }, 4000);
+        })
+        .catch(error => {
+            btn.innerText = originalText;
+            console.log(error);
+        });
     });
 }
 
@@ -404,8 +427,30 @@ const contactMessage = document.getElementById('contact-message');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        contactMessage.classList.remove('hidden');
-        setTimeout(() => { contactMessage.classList.add('hidden'); contactForm.reset(); }, 3000);
+        const btn = contactForm.querySelector('button[type="submit"]');
+        const originalText = btn.innerText;
+        btn.innerText = "Sending...";
+
+        fetch("https://formsubmit.co/ajax/wondewossen9@gmail.com", {
+            method: "POST",
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify({
+                _subject: "New Contact Message",
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            btn.innerText = originalText;
+            contactMessage.classList.remove('hidden');
+            setTimeout(() => { contactMessage.classList.add('hidden'); contactForm.reset(); }, 4000);
+        })
+        .catch(error => {
+            btn.innerText = originalText;
+            console.log(error);
+        });
     });
 }
 
